@@ -3,9 +3,9 @@ from random import randint #This line imports the randint function from the rand
 
 ranNums = [] #name your list and make sure it is empty!
 
-
+length = int(input("How long do you want the list to be? "))
 # Generates a list of 5 or 10 random integers between 1 and 50 inclusive.
-for i in range(10): #for loop appends 5 numbers to your list, but make sure you name your variable
+for i in range(length): #for loop appends "length" numbers to your list, but make sure you name your variable
     ranNums.append(randint(1,50)) #this adds a random number between 1-50 to the list
 ranSearch = input("What number do you want to search for?")
 print(ranNums)
@@ -26,3 +26,6 @@ print("The smallest number is", min(ranNums))
 print("The largest number is", max(ranNums))
 print("The sum of the list is", sum(ranNums))
 print("The sorted list is", sorted(ranNums))
+print(f"The average of the list is {sum(ranNums)/len(ranNums)}")
+ranNums.reverse()
+print(f"The reversed list is {ranNums}")
